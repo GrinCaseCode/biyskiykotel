@@ -37,10 +37,10 @@
   }
   @font-face {
     font-family: 'Manrope';
-    src: local('Manrope  Semi bold'), local('Manrope--Semi-bold'),
-        url('../fonts/Manrope-Semibold.woff2') format('woff2'),
-        url('../fonts/Manrope-Semibold.woff') format('woff'),
-        url('../fonts/Manrope-Semibold.ttf') format('truetype');
+    src: local('Manrope-SemiBold'), local('Manrope-SemiBold'),
+        url('../fonts/Manrope-SemiBold.woff2') format('woff2'),
+        url('../fonts/Manrope-SemiBold.woff') format('woff'),
+        url('../fonts/Manrope-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
   }
