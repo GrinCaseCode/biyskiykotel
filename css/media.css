@@ -1365,10 +1365,10 @@
         padding: 0 10px;
     }
     .billbord_second .billbord__title {
-        font-size: 22px;
+        font-size: 25px;
     }
     .billbord_second .billbord__title span {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .categories {
@@ -1447,9 +1447,6 @@
     }
     .consultation__image img {
         max-width: 100%;
-    }
-    .consultation__image {
-        margin-top: 22px;
     }
 
     .text-page {
@@ -2082,6 +2079,9 @@
   border-radius: 10px;
   background-color: #ccc;
 }
+.consultation .btn-main {
+    width: 100%;
+}
 }
 
 /* Small Devices, Tablets */
@@ -2094,20 +2094,7 @@
     }
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {}
 
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
