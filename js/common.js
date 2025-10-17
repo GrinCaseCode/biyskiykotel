@@ -18,6 +18,23 @@ $(document).ready(function () {
 		$menu.removeClass("fixed").addClass("default");
 	}
 
+		//scroll top
+	var $btnTop = $(".scroll-top");
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 200 && $btnTop.hasClass("default")) {
+			$btnTop.removeClass("default").addClass("fixed");
+		} else if ($(this).scrollTop() <= 200 && $btnTop.hasClass("fixed")) {
+			$btnTop.removeClass("fixed").addClass("default");
+		}
+
+	});
+
+	if ($(this).scrollTop() > 200 && $btnTop.hasClass("default")) {
+		$btnTop.removeClass("default").addClass("fixed");
+	} else if ($(this).scrollTop() <= 200 && $btnTop.hasClass("fixed")) {
+		$btnTop.removeClass("fixed").addClass("default");
+	}
+
 
 	/*input file*/
 	$("input[type='file']").change(function () {
@@ -97,9 +114,9 @@ $(document).ready(function () {
 			});
 
 			$(".menu i").click(function () {
-					$(".catalog-dropdown").slideUp(200);
-					$(".btn-catalog").removeClass("active");
-					
+				$(".catalog-dropdown").slideUp(200);
+				$(".btn-catalog").removeClass("active");
+
 				$(this).parent().siblings().find("ul").slideUp(200);
 				$(this).parent().siblings().find("i").removeClass("active");
 				if ($(this).siblings("ul").is(":hidden")) {
@@ -140,18 +157,17 @@ $(document).ready(function () {
 	//слайдер
 
 	$('.slider-billbord').slick({
-		arrows: false,
+		arrows: true,
 		dots: false,
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 4000,
 		touchThreshold: 1000,
 		speed: 1000,
-		fade: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
 	});
 
 	$('.slider-documents').slick({
@@ -161,8 +177,8 @@ $(document).ready(function () {
 		touchThreshold: 1000,
 		slidesToShow: 6,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
 		responsive: [
 			{
 				breakpoint: 992,
@@ -191,8 +207,8 @@ $(document).ready(function () {
 		touchThreshold: 1000,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
 		responsive: [
 			{
 				breakpoint: 992,
@@ -273,58 +289,121 @@ $(document).ready(function () {
 		touchThreshold: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
 	});
 
-		$('.slider-images').slick({
+	$('.slider-images').slick({
 		arrows: true,
 		dots: false,
 		infinite: true,
 		touchThreshold: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
 	});
 
-	
-  $('.tabs li a').click(function(event) {
-    event.preventDefault();
-    $(this).parent().parent().find("li").removeClass('active');
-    $(this).parent().addClass('active');
-    $(".tab-pane").fadeOut(0);
-    var selectTab = $(this).attr("href");
-    $(selectTab).fadeIn(200);
-	$('.tab-pane').find(".slider-card").slick('setPosition');
-	$('.tab-pane').find(".slider-images").slick('setPosition');
-  });
+	$('.slider-history').slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		touchThreshold: 1000,
+		variableWidth: true,
+		focusOnSelect: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
+	});
 
-	$(".input-phone").mask("+7 (999) 999-99-99");
-
-
-	// стайлер для select
-	$('select').styler();
-
-	//Попап менеджер FancyBox
-	$(".fancybox").fancybox({
-		autoFocus: false,
-		backFocus: false,
+	$('.slider-partners').slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		touchThreshold: 1000,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					dots: true
+				}
+			}
+		]
 	});
 
 
-	//Кнопка "Наверх"
-	$(".btn_top").click(function () {
-		$("body, html").animate({
-			scrollTop: 0
-		}, 800);
-		return false;
+	$('.tabs li a').click(function (event) {
+		event.preventDefault();
+		$(this).parent().parent().find("li").removeClass('active');
+		$(this).parent().addClass('active');
+		$(".tab-pane").fadeOut(0);
+		var selectTab = $(this).attr("href");
+		$(selectTab).fadeIn(200);
+		$('.tab-pane').find(".slider-card").slick('setPosition');
+		$('.tab-pane').find(".slider-images").slick('setPosition');
 	});
 
-	objectFitImages();
+	//locations
+
+	{
+		if ($(window).width() > 992) {
+			$('.tabs-locations__item').on('mouseenter', function () {
+				const index = $(this).index()
+				$('.tab-pane-location').fadeOut(0).eq(index).fadeIn(200);
+			});
+		}
+
+		{
+			if ($(window).width() < 992) {
+				$('.tabs-locations__item').on('click', function () {
+					const index = $(this).index()
+					$('.tab-pane-location').fadeOut(0).eq(index).fadeIn(200);
+				});
+			}
+}}
+
+			$(".input-phone").mask("+7 (999) 999-99-99");
 
 
-});
+			// стайлер для select
+			$('select').styler();
+
+			//Попап менеджер FancyBox
+			$(".fancybox").fancybox({
+				autoFocus: false,
+				backFocus: false,
+			});
+
+
+			//Кнопка "Наверх"
+			$(".scroll-top").click(function () {
+				$("body, html").animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+
+			objectFitImages();
+
+
+		});
 
 
 /*polifyl*/
