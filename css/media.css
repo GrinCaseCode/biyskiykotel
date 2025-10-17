@@ -1694,6 +1694,7 @@
         top: 100%;
         left: 0;
         height: calc(100vh - 70px);
+        padding-bottom: 100px;
         overflow: auto;
         background: #fff;
         display: flex;
@@ -2082,6 +2083,23 @@
 .consultation .btn-main {
     width: 100%;
 }
+.catalog-dropdown ul ul li a {
+    display: block;
+    border-bottom: 1px transparent solid;
+    border: none;
+    padding: 12px 0;
+    padding-right: 40px;
+}
+.catalog-dropdown ul ul li {
+    padding: 0;
+}
+.catalog-dropdown ul ul li .close-dropdown {
+    right: 0;
+}
+.catalog-dropdown ul ul ul {
+        padding-top: 0;
+        padding-left: 15px;
+    }
 }
 
 /* Small Devices, Tablets */
