@@ -97,6 +97,9 @@ $(document).ready(function () {
 			});
 
 			$(".menu i").click(function () {
+					$(".catalog-dropdown").slideUp(200);
+					$(".btn-catalog").removeClass("active");
+					
 				$(this).parent().siblings().find("ul").slideUp(200);
 				$(this).parent().siblings().find("i").removeClass("active");
 				if ($(this).siblings("ul").is(":hidden")) {
