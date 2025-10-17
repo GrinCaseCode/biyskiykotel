@@ -43,6 +43,20 @@ $(document).ready(function () {
 		filename_text.html(filename);
 	});
 
+		//sidebar catalog
+	$(".btn-main_filter").click(function (e) {
+		e.preventDefault();
+		$(".sidebar-catalog").slideToggle(200);
+	});
+
+	$(".item-sidebar__head").click(function () {
+		$(this).parent().siblings().removeClass("active");
+		$(this).parent().siblings().find(".item-sidebar__content").slideUp(200);
+
+		$(this).parent().toggleClass("active");
+		$(this).siblings().slideToggle(200);
+	});
+
 
 	//кнопка sandwich
 	$(".sandwich").click(function () {

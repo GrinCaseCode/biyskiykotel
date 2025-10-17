@@ -61,7 +61,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper {
 	padding-top: 158px;
-	overflow: hidden;
 }
 a {
 	text-decoration: none;
@@ -1989,4 +1988,110 @@ li::marker {
 }
 .slider-billbord .slick-next {
 	right: 375px;
+}
+
+.page-catalog {
+	padding-bottom: 60px;
+}
+.head-catalog {
+	margin-bottom: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.head-catalog .card-buttons {
+	margin: 0;
+}
+.item-catalog {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 100%;
+	transition: all 0.3s;
+}
+.item-catalog__image {
+	height: 255px;
+	margin-bottom: 10px;
+	width: 100%;
+	display: block;
+}
+.item-catalog__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	font-family: 'object-fit: cover;';
+	transition: all 2s;
+}
+.item-catalog__content {
+	padding: 10px 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1;
+	width: 100%;
+}
+.item-catalog__title {
+	font-size: 20px;
+	margin-bottom: 16px;
+	font-weight: 700;
+	line-height: 140%;
+	color: #333454;
+	display: block;
+}
+.item-catalog ul {
+	padding-left: 20px;
+	padding-bottom: 16px;
+}
+.item-catalog ul li {
+	list-style-type: disc;
+}
+.item-catalog__content .btn-main {
+	height: 40px;
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: auto;
+}
+.row.row_catalog > div {
+	margin-bottom: 32px;
+}
+.row.row_catalog {
+	margin-bottom: -32px;
+}
+.sidebar-catalog {
+	padding: 12px 36px;
+	top: 100px;
+	transition: all 0.3s;
+	position: sticky;
+	background: #e7e7ea;
+}
+.item-sidebar__head {
+	font-size: 20px;
+	padding: 12px 0;
+	font-weight: 700;
+	line-height: 140%;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.item-sidebar__content {
+	padding-bottom: 12px;
+	display: none;
+}
+.item-sidebar__content li {
+	margin-bottom: 2px;
+}
+.item-sidebar__content li:last-child {
+	margin-bottom: 0;
+}
+.item-sidebar__content li a {
+	padding: 10px 16px;
+	display: block;
+	background: #fff;
+	border-radius: 3px;
+	font-weight: 600;
+	line-height: 140%;
+	color: #333454;
+}
+.item-sidebar__content li.active a {
+	color: #EE714A;
 }
