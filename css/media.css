@@ -806,7 +806,8 @@
     }
     .sidebar-catalog {
         padding: 10px 29px;
-        top: 80px;
+        top: 70px;
+        max-height: calc(100vh - 70px);
     }
     .item-sidebar__head {
         font-size: 16px;
@@ -2904,15 +2905,15 @@
     .sidebar-catalog {
         padding: 10px 20px;
         top: 0;
+        margin-bottom: 20px;
+        display: none;
+        max-height: initial;
+        overflow: initial;
         transition: initial;
     }
     .item-sidebar__content li a {
         padding: 8px 13px;
         border-radius: 4px;
-    }
-    .sidebar-catalog {
-        margin-bottom: 20px;
-        display: none;
     }
     .item-catalog__content .btn-main {
         height: 43px;
