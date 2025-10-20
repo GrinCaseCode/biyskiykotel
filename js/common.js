@@ -158,8 +158,6 @@ $(document).ready(function () {
 	}
 
 
-
-
 	//questions
 	$(".item-question__head").click(function () {
 		$(this).parent().toggleClass("active");
@@ -327,10 +325,18 @@ $(document).ready(function () {
 		focusOnSelect: true,
 		autoplay: true,
 		autoplaySpeed: 4000,
-		slidesToShow: 1,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
 	});
 
 	$('.slider-partners').slick({
@@ -347,14 +353,6 @@ $(document).ready(function () {
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 2,
-					arrows: false,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
 					arrows: false,
 					dots: true
 				}
