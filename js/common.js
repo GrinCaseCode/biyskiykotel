@@ -18,7 +18,7 @@ $(document).ready(function () {
 		$menu.removeClass("fixed").addClass("default");
 	}
 
-		//scroll top
+	//scroll top
 	var $btnTop = $(".scroll-top");
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 200 && $btnTop.hasClass("default")) {
@@ -43,7 +43,7 @@ $(document).ready(function () {
 		filename_text.html(filename);
 	});
 
-		//sidebar catalog
+	//sidebar catalog
 	$(".btn-main_filter").click(function (e) {
 		e.preventDefault();
 		$(".sidebar-catalog").slideToggle(200);
@@ -360,7 +360,7 @@ $(document).ready(function () {
 		]
 	});
 
-		$('.item-portfolio__slider').slick({
+	$('.item-portfolio__slider').slick({
 		arrows: true,
 		dots: true,
 		infinite: true,
@@ -401,33 +401,34 @@ $(document).ready(function () {
 					$('.tab-pane-location').fadeOut(0).eq(index).fadeIn(200);
 				});
 			}
-}}
+		}
+	}
 
-			$(".input-phone").mask("+7 (999) 999-99-99");
-
-
-			// стайлер для select
-			$('select').styler();
-
-			//Попап менеджер FancyBox
-			$(".fancybox").fancybox({
-				autoFocus: false,
-				backFocus: false,
-			});
+	$(".input-phone").mask("+7 (999) 999-99-99");
 
 
-			//Кнопка "Наверх"
-			$(".scroll-top").click(function () {
-				$("body, html").animate({
-					scrollTop: 0
-				}, 800);
-				return false;
-			});
+	// стайлер для select
+	$('select').styler();
 
-			objectFitImages();
+	//Попап менеджер FancyBox
+	$(".fancybox").fancybox({
+		autoFocus: false,
+		backFocus: false,
+	});
 
 
-		});
+	//Кнопка "Наверх"
+	$(".scroll-top").click(function () {
+		$("body, html").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+
+	objectFitImages();
+
+
+});
 
 
 /*polifyl*/
