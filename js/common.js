@@ -362,6 +362,17 @@ $(document).ready(function () {
 		]
 	});
 
+		$('.item-portfolio__slider').slick({
+		arrows: true,
+		dots: true,
+		infinite: true,
+		touchThreshold: 1000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-long-arrow-left"></i></div>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-long-arrow-right"></i></div>',
+	});
+
 
 	$('.tabs li a').click(function (event) {
 		event.preventDefault();
@@ -372,6 +383,7 @@ $(document).ready(function () {
 		$(selectTab).fadeIn(200);
 		$('.tab-pane').find(".slider-card").slick('setPosition');
 		$('.tab-pane').find(".slider-images").slick('setPosition');
+		$('.tab-pane').find(".item-portfolio__slider").slick('setPosition');
 	});
 
 	//locations
